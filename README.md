@@ -11,3 +11,8 @@ A basic blog built on Rails follwing [Ruby on Rails Guide](http://guides.rubyonr
 
 ### Usage:
 The website is very basic input fields are clearly labelled and with error protection for invalid inputs.
+
+### Future improvements:
+- use [Devise gem](https://github.com/plataformatec/devise) rather than basic http authentication
+- use [Socialization gem](https://github.com/cmer/socialization) to allow users to like posts and follow other users
+- css styling to make a more engaging presentation 
