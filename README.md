@@ -1,24 +1,13 @@
-# README
+# Basic blog built using Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A basic blog built on Rails follwing [Ruby on Rails Guide](http://guides.rubyonrails.org/getting_started.html) 
 
-Things you may want to cover:
+### Features:
+- users can create an account
+- log in/log out of the account
+- create a post containing a post title and post content
+- publish comments on their own and other articles
+- inputs saved in a database
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Usage:
+The website is very basic input fields are clearly labelled and with error protection for invalid inputs.
