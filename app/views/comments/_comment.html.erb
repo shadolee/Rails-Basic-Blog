@@ -1,0 +1,20 @@
+<!--# this is a partial file to extract showing all comments for the article-->
+
+<p>
+  <strong>Commenter:</strong>
+  <%= comment.commenter %>
+  <!--# this's the name of the commenter in the comment section-->
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= comment.body %>
+  <!--# this's the comment they made in the comment section-->
+</p>
+
+<!--# delete comments, same code in index.html for article deletion-->
+<p>
+  <%= link_to 'Destroy Comment', [comment.article, comment],
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+</p>

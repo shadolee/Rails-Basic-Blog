@@ -1,0 +1,41 @@
+<h1>New Article</h1>
+
+<%= render 'form' %>
+<%= link_to 'Back', articles_path %>
+
+<%= form_for :article, url: articles_path do |f| %>
+
+<% if @article.errors.any? %><!--# check for errors -->
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@article.errors.count, "error") %>
+      <!--# pluralize is a rails helper, it takes a number and a string as an argument
+      if the number is greater than 1, the string will be automatically pluralized-->
+      prohibited this article from being saved:
+    </h2>
+    <ul>
+      <% @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+  <p>
+    <%= f.label :title %><br> <!--# f is for FormBuilder objects-->
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+
+  <p>
+    <%= f.submit %> <!--# a call to submit on the f object will create a submit button -->
+  </p>
+<% end %>
+
+<%= link_to 'Back', articles_path %>
+<!--#back button goes to the articles index page -->
+<!--#can use this or controller: 'articles' if in same controlle -->

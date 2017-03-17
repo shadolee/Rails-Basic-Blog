@@ -1,0 +1,31 @@
+
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+<!--# says 'Title:' then displays article title-->
+
+<p>
+  <strong>Text:</strong>
+  <%= @article.text %>
+</p>
+<!--# says 'Text:' then displays article text content-->
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+<!--# this will render(show/produce) the partial file
+_comment.html.erb for each comment in the article.comments
+collection. The render method iterates over the collection
+assigning a variable named the same as the partial-->
+
+<!--# The @article object is available to any partials rendered
+in the view because we defined it as an instance variable-->
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+<!--# will show the form template partial from the comments folder-->
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>
+
+<!--# gives hyperlink to edit page/article index-->

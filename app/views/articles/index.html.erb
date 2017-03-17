@@ -1,0 +1,26 @@
+<h1>Listing articles</h1>
+
+<%= link_to 'New Article', new_article_path %>
+<!-- link_to 'text to display', where_to_go -->
+
+<table> <!-- create a table-->
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th colspan="2"></th>
+  </tr>
+
+  <% @articles.each do |article| %> <!-- loop thru titles and text in each column-->
+    <tr>
+      <td><%= article.title %></td> <!-- table data  for each-->
+      <td><%= article.text %></td>
+      <td><%= link_to 'Show', article_path(article) %></td>
+      <td><%= link_to 'Edit', edit_article_path(article) %></td>
+      <!-- hyperlink "Show" to that article in the table-->
+      <td><%= link_to 'Destroy', article_path(article),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %></td>
+
+    </tr>
+  <% end %> <!-- end ruby loop -->
+</table>

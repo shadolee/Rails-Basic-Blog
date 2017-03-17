@@ -1,0 +1,18 @@
+<%= form_for([@article, @article.comments.build]) do |f| %>
+<!--# create a form for a new comment section on own page-->
+
+<p>
+  <%= f.label :commenter %><br>
+  <%= f.text_field :commenter %>
+</p>
+<!--# title and input box to write name of commenter-->
+<p>
+  <%= f.label :body %><br>
+  <%= f.text_area :body %>
+</p>
+<!--# box for comment text and name of section-->
+<p>
+  <%= f.submit %>
+</p>
+<!--# creates a submit but on the form--> 
+<% end %>
